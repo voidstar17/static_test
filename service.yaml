@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: static_test_service
+spec:
+  selector:
+    app: static_test_app
+  ports:
+    - port: 80
+      targetPort: 80
