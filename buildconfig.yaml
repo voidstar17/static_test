@@ -1,9 +1,9 @@
 apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
-  name: static_test
+  name: static-test
   labels:
-    app: static_test_app
+    app: static-test-app
 spec:
   source:
     type: Git
@@ -17,4 +17,4 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: static_test:latest
+      name: static-test:latest
