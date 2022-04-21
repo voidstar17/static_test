@@ -1,0 +1,10 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: static_test_route
+spec:
+  to:
+    kind: Service
+    name: static_test_service
+  port:
+    targetPort: 80
