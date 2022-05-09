@@ -1,19 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: static_test_deployment
+  name: bun
+  namespace: void17-dev
 spec:
   selector:
     matchLabels:
-      app: static_test
-  replicas: 1
+      app: bun
+  replicas: 2
   template:
     metadata:
       labels:
-        app: static_test
+        app: bun
     spec:
       containers:
-      - name: static_test_app
-        image: https://github.com/voidstar17/static_test/blob/main/Dockerfile:0.0.1
-        ports:
-        - containerPort: 80
+        - name: bun
+          image: int049/httpd_bun:1
+          ports:
+            - containerPort: 80
