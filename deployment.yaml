@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: bun
-          image: int049/httpd_bun:1
+          image: int049/httpd_bun:2
           ports:
-            - containerPort: 80
+            - containerPort: 8080
