@@ -1,0 +1,8 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: cm-bun
+  namespace: void17-dev
+data:
+  bun.property.1: moin
+  bun.property.2: bunny
