@@ -21,15 +21,14 @@ spec:
           env:
             - name: bunvar
               value: hellobun
-            - name: SPECIAL_LEVEL_KEY
+            - name: bunkey
               valueFrom:
                     configMapKeyRef:
                         name: cm-bun 
                         key: bun.property.1
                         optional: true
-            
-            
-              
-              
-              
-          
+            - name: bunuser
+              valueFrom:
+               secretKeyRef:
+                 key: username
+                 name: bun-secret
