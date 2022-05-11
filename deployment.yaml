@@ -16,6 +16,7 @@ spec:
       containers:
         - name: bun
           image: int049/httpd_bun:2
+          command: ['sh', '-c', 'echo The app is running! && sleep 3600']
           ports:
             - containerPort: 8080
           env:
