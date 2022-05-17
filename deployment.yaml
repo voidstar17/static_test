@@ -18,6 +18,13 @@ spec:
           image: int049/httpd_bun:2
           ports:
             - containerPort: 8080
+          readinessProbe:
+           httpGet:
+            scheme: HTTPS
+            path: /index.html
+            port: 8443
+          initialDelaySeconds: 10
+          periodSeconds: 5
           env:
             - name: bunvar
               value: hellobun
